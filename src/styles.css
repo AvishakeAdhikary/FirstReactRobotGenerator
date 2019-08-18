@@ -1,0 +1,19 @@
+* {
+  font-family: sans-serif;
+}
+
+body{
+  display:flex-wrap;
+  text-align: center;
+  align-items: center;
+  background: linear-gradient( yellow,red);
+}
+
+.card{
+  justify-content: center;
+  background: linear-gradient( yellow,red);
+}
+
+.List{
+  flex-direction: row;
+}
