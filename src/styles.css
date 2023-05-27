@@ -2,18 +2,89 @@
   font-family: sans-serif;
 }
 
-body{
-  display:flex-wrap;
+body {
+  display: flex-wrap;
   text-align: center;
   align-items: center;
-  background: linear-gradient( yellow,red);
+  background: #2f97c1;
 }
 
-.card{
+.card {
   justify-content: center;
-  background: linear-gradient( yellow,red);
+  background: #1ccad8;
+  padding: 3%;
+  margin: 2em;
+  border-radius: 1em;
+  box-shadow: black;
 }
 
-.List{
+.card:first-child {
+  margin-top: 120px;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  transition-duration: 0.5s;
+}
+
+.List {
   flex-direction: row;
+}
+
+.searchBox {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  background: #587291;
+  height: 40px;
+  border-radius: 40px;
+  padding: 10px;
+}
+
+.searchInput::placeholder {
+  color: black;
+}
+
+.searchBox:hover > .searchInput {
+  width: 240px;
+  padding: 0 6px;
+}
+
+.searchBox:hover > .searchButton {
+  background: white;
+  color: #587291;
+}
+
+.searchButton {
+  color: white;
+  float: right;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #587291;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+}
+
+.searchInput {
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: white;
+  font-size: 16px;
+  transition: 0.4s;
+  line-height: 40px;
+  width: 0px;
+}
+
+@media screen and (max-width: 620px) {
+  .searchBox:hover > .searchInput {
+    width: 150px;
+    padding: 0 6px;
+  }
 }
