@@ -1,10 +1,7 @@
 import React from "react";
 import SearchBox from "./SearchBox";
 import Cardlist from "./Cardlist";
-import Next from "./Next";
-import Prev from "./Prev";
 import Footer from "./Footer";
-
 
 class App extends React.Component {
   constructor() {
@@ -17,18 +14,18 @@ class App extends React.Component {
 
   componentDidMount() {
     fetch("https://jsonplaceholder.typicode.com/users")
-      .then(response => response.json())
-      .then(users => {
+      .then((response) => response.json())
+      .then((users) => {
         this.setState({ robots: users });
       });
   }
 
-  onSearchChange = event => {
+  onSearchChange = (event) => {
     this.setState({ searchfield: event.target.value });
   };
 
   render() {
-    const filteredRobots = this.state.robots.filter(robots => {
+    const filteredRobots = this.state.robots.filter((robots) => {
       return robots.name
         .toLowerCase()
         .includes(this.state.searchField.toLowerCase());
@@ -37,8 +34,6 @@ class App extends React.Component {
       <div>
         <SearchBox searchChange={this.searchField} />
         <Cardlist className="List" robots={filteredRobots} />
-        <Next />
-        <Prev />
         <Footer />
       </div>
     );
