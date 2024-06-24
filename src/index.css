@@ -1,0 +1,49 @@
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #667BC6;
+  color: #FDFFD2;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Container styling */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Card styling */
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFB4C2;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin: 1rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+img {
+  max-width: 400px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Footer styling */
+.footer {
+  margin-top: 2rem;
+}
+
+.footer h2 {
+  font-size: 1.5rem;
+  color: rgb(253, 255, 210);
+}
